@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: krs <kristuff86@icloud.com>                +#+  +:+       +#+        */
+/*   By: kgraczyk <kgraczyk@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 17:09:26 by krs               #+#    #+#             */
-/*   Updated: 2024/03/27 17:10:29 by krs              ###   ########.fr       */
+/*   Updated: 2024/04/03 21:49:13 by kgraczyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	num_len(long n)
+static int	numbers_length(long n)
 {
 	int	i;
 
@@ -33,9 +33,9 @@ static int	num_len(long n)
 
 int	ft_putnbr(int n)
 {
-	int	nbr_len;
+	int	nbr_length;
 
-	nbr_len = num_len(n);
+	nbr_length = numbers_length(n);
 	ft_putnbr_fd(n, 1);
-	return (nbr_len);
+	return (nbr_length);
 }

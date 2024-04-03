@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_puthex.c                                        :+:      :+:    :+:   */
+/*   ft_put_hexadecimal.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kgraczyk <kgraczyk@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 17:08:27 by krs               #+#    #+#             */
-/*   Updated: 2024/04/03 21:34:10 by kgraczyk         ###   ########.fr       */
+/*   Updated: 2024/04/03 21:43:40 by kgraczyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_put_hexadecimal(unsigned long n, char format)
 	char			*base;
 	unsigned int	num;
 	int				i;
-	unsigned int	base_len;
+	unsigned int	base_length;
 
 	if (format == 'x')
 		base = "0123456789abcdef";
@@ -25,9 +25,9 @@ int	ft_put_hexadecimal(unsigned long n, char format)
 		base = "0123456789ABCDEF";
 	i = 0;
 	num = (unsigned int)n;
-	base_len = ft_strlen(base);
-	if (num > (base_len - 1))
-		i += ft_put_hexadecimal(num / base_len, format);
-	i += ft_putchar(*(base + (num % base_len)));
+	base_length = ft_strlen(base);
+	if (num > (base_length - 1))
+		i += ft_put_hexadecimal(num / base_length, format);
+	i += ft_putchar(*(base + (num % base_length)));
 	return (i);
 }

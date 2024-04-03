@@ -6,7 +6,7 @@
 /*   By: kgraczyk <kgraczyk@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 17:01:35 by krs               #+#    #+#             */
-/*   Updated: 2024/04/03 21:39:36 by kgraczyk         ###   ########.fr       */
+/*   Updated: 2024/04/03 21:52:12 by kgraczyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,40 +14,40 @@
 
 static int	print_helper(unsigned long n, const char *base)
 {
-	int	len;
-	int	res;
+	int	length;
+	int	result;
 
-	len = 0;
+	length = 0;
 	if (n > (ft_strlen(base) - 1))
 	{
-		res = print_helper(n / ft_strlen(base), base);
-		if (res < 0)
+		result = print_helper(n / ft_strlen(base), base);
+		if (result < 0)
 			return (-1);
-		len += res;
+		length += result;
 	}
-	res = ft_putchar(*(base + (n % ft_strlen(base))));
-	if (res < 0)
+	result = ft_putchar(*(base + (n % ft_strlen(base))));
+	if (result < 0)
 		return (-1);
-	len += res;
-	return (len);
+	length += result;
+	return (length);
 }
 
 int	ft_put_adress(void *format)
 {
 	unsigned long	n;
 	const char		*base;
-	int				len;
-	int				res;
+	int				length;
+	int				result;
 
 	n = (unsigned long)format;
 	base = "0123456789abcdef";
-	res = ft_putstr("0x");
-	if (res < 0)
+	result = ft_putstr("0x");
+	if (result < 0)
 		return (-1);
-	len = res;
-	res = print_helper(n, base);
-	if (res < 0)
+	length = result;
+	result = print_helper(n, base);
+	if (result < 0)
 		return (-1);
-	len += res;
-	return (len);
+	length += result;
+	return (length);
 }

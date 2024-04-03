@@ -33,5 +33,10 @@ int main() {
     // Test case 9: Printing a percent sign
     ft_printf("The percent sign is %%\n");
 
+    int     in = -1234567;
+    unsigned int    un = 1234567;
+    char    *str = "Hello, world!";
+    ft_printf("Yo! %s %u %d %% \n", str, un, in);
+
     return 0;
 }

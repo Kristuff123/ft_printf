@@ -3,30 +3,31 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putbase_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: krs <kristuff86@icloud.com>                +#+  +:+       +#+        */
+/*   By: kgraczyk <kgraczyk@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 17:04:39 by krs               #+#    #+#             */
-/*   Updated: 2024/03/27 17:05:23 by krs              ###   ########.fr       */
+/*   Updated: 2024/04/03 21:52:45 by kgraczyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 void	ft_putbase_fd(int nbr, const char *base, int fd)
 {
-	int		base_len;
-	long	nb;
+	int		base_length;
+	long	number;
 	char	c;
 
-	base_len = ft_strlen(base);
+	base_length = ft_strlen(base);
 	if (nbr < 0)
 	{
 		write(fd, "-", 1);
-		nb = -((long)nbr);
+		number = -((long)nbr);
 	}
 	else
-		nb = (long)nbr;
-	if (nb > (base_len - 1))
-		ft_putbase_fd(nb / base_len, base, fd);
-	c = *(base + (nb % base_len));
+		number = (long)nbr;
+	if (number > (base_length - 1))
+		ft_putbase_fd(number / base_length, base, fd);
+	c = *(base + (number % base_length));
 	write(fd, &c, 1);
 }
