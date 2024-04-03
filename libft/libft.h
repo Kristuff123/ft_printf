@@ -6,7 +6,7 @@
 /*   By: kgraczyk <kgraczyk@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 17:21:24 by krs               #+#    #+#             */
-/*   Updated: 2024/04/01 14:08:54 by kgraczyk         ###   ########.fr       */
+/*   Updated: 2024/04/03 21:22:44 by kgraczyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ long	ft_absolut(long n);
 int		ft_putad(void *format);
 void	ft_putbase_fd(int nbr, const char *base, int fd);
 int		ft_putchar(char c);
-void	ft_putchar_fd(char c, int fd);
 int		ft_puthex(unsigned long n, char format);
 int		ft_putnbr(int n);
 void	ft_putnbr_fd(int n, int fd);

@@ -1,7 +1,7 @@
 NAME = libft.a
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
-SRC = ft_absolut.c ft_strlen.c ft_putnbr.c ft_puthex.c ft_putad.c ft_putstr.c ft_putchar.c ft_putnbr_fd.c ft_putbase_fd.c ft_putchar_fd.c ft_strchr.c ft_putuns.c
+SRC = ft_absolut.c ft_strlen.c ft_putnbr.c ft_puthex.c ft_putad.c ft_putstr.c ft_putchar.c ft_putnbr_fd.c ft_putbase_fd.c ft_strchr.c ft_putuns.c
 OBJ = $(SRC:.c=.o)
 
 all: $(NAME)
