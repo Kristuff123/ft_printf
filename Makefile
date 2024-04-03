@@ -12,6 +12,7 @@ $(NAME): $(OBJ)
 	@make -C $(LIBFT_PATH)
 	@echo "Creating $(NAME)..."
 	@cp $(LIBFT) $(NAME)
+	@cp $(LIBFT) ./
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
 	@echo "$(NAME) created successfully!"
