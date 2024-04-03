@@ -6,7 +6,7 @@
 /*   By: kgraczyk <kgraczyk@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 22:02:48 by kgraczyk          #+#    #+#             */
-/*   Updated: 2024/04/03 21:51:49 by kgraczyk         ###   ########.fr       */
+/*   Updated: 2024/04/03 22:01:52 by kgraczyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,12 +43,12 @@ static int	ft_format(va_list args, const char format)
 static int	process_format(const char *str, int *i, va_list args, int *length)
 {
 	int		format_result;
-	char	format_char;
+	char	f_char;
 
-	format_char = *(str + *i + 1);
-	if (*(str + *i) == '%' && format_char && ft_strchr("cspdiuxX%", format_char))
+	f_char = *(str + *i + 1);
+	if (*(str + *i) == '%' && f_char && ft_strchr("cspdiuxX%", f_char))
 	{
-		format_result = ft_format(args, format_char);
+		format_result = ft_format(args, f_char);
 		if (format_result < 0)
 			return (-1);
 		*length += format_result;
