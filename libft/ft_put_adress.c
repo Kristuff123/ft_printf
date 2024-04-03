@@ -1,14 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putad.c                                         :+:      :+:    :+:   */
+/*   ft_put_adress.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kgraczyk <kgraczyk@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 17:01:35 by krs               #+#    #+#             */
-/*   Updated: 2024/03/28 16:30:06 by krs              ###   ########.fr       */
+/*   Updated: 2024/04/03 21:39:36 by kgraczyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 static int	print_helper(unsigned long n, const char *base)
@@ -31,7 +32,7 @@ static int	print_helper(unsigned long n, const char *base)
 	return (len);
 }
 
-int	ft_putad(void *format)
+int	ft_put_adress(void *format)
 {
 	unsigned long	n;
 	const char		*base;

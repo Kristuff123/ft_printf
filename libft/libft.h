@@ -6,7 +6,7 @@
 /*   By: kgraczyk <kgraczyk@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 17:21:24 by krs               #+#    #+#             */
-/*   Updated: 2024/04/03 21:22:44 by kgraczyk         ###   ########.fr       */
+/*   Updated: 2024/04/03 21:34:27 by kgraczyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,14 @@
 # include <math.h>
 
 long	ft_absolut(long n);
-int		ft_putad(void *format);
+int		ft_put_adress(void *format);
 void	ft_putbase_fd(int nbr, const char *base, int fd);
 int		ft_putchar(char c);
-int		ft_puthex(unsigned long n, char format);
+int		ft_put_hexadecimal(unsigned long n, char format);
 int		ft_putnbr(int n);
 void	ft_putnbr_fd(int n, int fd);
 int		ft_putstr(char const *s);
-int		ft_putuns(unsigned long n);
+int		ft_put_unsigned(unsigned long n);
 char	*ft_strchr(char const *str, int c);
 size_t	ft_strlen(const char *str);
 

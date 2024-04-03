@@ -6,7 +6,7 @@
 /*   By: kgraczyk <kgraczyk@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 22:02:48 by kgraczyk          #+#    #+#             */
-/*   Updated: 2024/04/01 14:08:34 by kgraczyk         ###   ########.fr       */
+/*   Updated: 2024/04/03 21:38:02 by kgraczyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,16 +24,16 @@ static int	ft_format(va_list args, const char format)
 	else if (format == 'd' || format == 'i')
 		return (ft_putnbr((va_arg(args, int))));
 	else if (format == 'X' || format == 'x')
-		return (ft_puthex(va_arg(args, unsigned int), format));
+		return (ft_put_hexadecimal(va_arg(args, unsigned int), format));
 	else if (format == 'p')
 	{
 		ptr = va_arg(args, void *);
 		if (ptr)
-			return (ft_putad(ptr));
+			return (ft_put_adress(ptr));
 		return (ft_putstr("0x0"));
 	}
 	else if (format == 'u')
-		return (ft_putuns(va_arg(args, unsigned int)));
+		return (ft_put_unsigned(va_arg(args, unsigned int)));
 	else if (format == '%')
 		return (ft_putchar('%'));
 	else
