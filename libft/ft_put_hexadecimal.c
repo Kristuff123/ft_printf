@@ -6,7 +6,7 @@
 /*   By: kgraczyk <kgraczyk@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 17:08:27 by krs               #+#    #+#             */
-/*   Updated: 2024/04/03 21:43:40 by kgraczyk         ###   ########.fr       */
+/*   Updated: 2024/04/11 21:27:04 by kgraczyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ int	ft_put_hexadecimal(unsigned long n, char format)
 		base = "0123456789abcdef";
 	else
 		base = "0123456789ABCDEF";
+	if (!base || !*base)
+		return (0);
 	i = 0;
 	num = (unsigned int)n;
 	base_length = ft_strlen(base);

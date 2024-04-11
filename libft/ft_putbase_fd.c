@@ -6,7 +6,7 @@
 /*   By: kgraczyk <kgraczyk@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 17:04:39 by krs               #+#    #+#             */
-/*   Updated: 2024/04/03 21:52:45 by kgraczyk         ###   ########.fr       */
+/*   Updated: 2024/04/11 21:22:24 by kgraczyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	ft_putbase_fd(int nbr, const char *base, int fd)
 	long	number;
 	char	c;
 
+	if (!base || !*base)
+		return ;
 	base_length = ft_strlen(base);
 	if (nbr < 0)
 	{
