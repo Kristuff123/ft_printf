@@ -6,7 +6,7 @@
 /*   By: kgraczyk <kgraczyk@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 17:01:35 by krs               #+#    #+#             */
-/*   Updated: 2024/04/11 21:25:49 by kgraczyk         ###   ########.fr       */
+/*   Updated: 2024/04/14 19:58:00 by kgraczyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,6 @@ int	ft_put_adress(void *format)
 
 	n = (unsigned long)format;
 	base = "0123456789abcdef";
-	if (!base || !*base)
-		return (0);
 	result = ft_putstr("0x");
 	if (result < 0)
 		return (-1);
