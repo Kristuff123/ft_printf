@@ -6,14 +6,14 @@
 /*   By: kgraczyk <kgraczyk@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 22:02:48 by kgraczyk          #+#    #+#             */
-/*   Updated: 2024/04/11 21:31:38 by kgraczyk         ###   ########.fr       */
+/*   Updated: 2024/04/14 18:57:35 by kgraczyk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft/libft.h"
 #include "ft_printf.h"
 
-static int	ft_format(va_list args, const char format)
+static int	ft_formatter(va_list args, const char format)
 {
 	void	*ptr;
 
@@ -40,15 +40,15 @@ static int	ft_format(va_list args, const char format)
 		return (-1);
 }
 
-static int	process_format(const char *str, int *i, va_list args, int *length)
+static int	ft_f_processor(const char *str, int *i, va_list args, int *length)
 {
 	int		format_result;
-	char	f_char;
+	char	next_char;
 
-	f_char = *(str + *i + 1);
-	if (*(str + *i) == '%' && f_char && ft_strchr("cspdiuxX%", f_char))
+	next_char = *(str + *i + 1);
+	if (*(str + *i) == '%' && next_char && ft_strchr("cspdiuxX%", next_char))
 	{
-		format_result = ft_format(args, f_char);
+		format_result = ft_formatter(args, next_char);
 		if (format_result < 0)
 			return (-1);
 		*length += format_result;
@@ -70,7 +70,7 @@ int	ft_printf(const char *str, ...)
 	va_start(args, str);
 	while (*(str + i))
 	{
-		if (process_format(str, &i, args, &length) < 0)
+		if (ft_f_processor(str, &i, args, &length) < 0)
 		{
 			va_end(args);
 			return (-1);
